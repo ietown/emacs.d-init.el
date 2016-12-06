@@ -13,8 +13,6 @@
 (setq recentf-max-menu-items 25)
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
-
-
-
+(delete-selection-mode 1)
 
 (provide 'init-default)
