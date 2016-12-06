@@ -8,29 +8,17 @@
 (setq ring-bell-function 'ignore)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-packages)
-
-;;(require 'hungry-delete)
-
-
-
-
+(require 'init-ui)
 
 ;; *******************
 (global-auto-revert-mode t)
 
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-;;(electric-indent-mode -1)c
-(setq inhibit-splash-screen t)
-(global-linum-mode 1)
 (defun open-my-init-file()
 (interactive)
   (find-file "~/.emacs.d/init.el"))
 
 (global-set-key (kbd "<f2>")'open-my-init-file)
 
-
-(setq-default cursor-type 'bar)
 (setq make-backup-file nil)
 
 (require 'org)
@@ -41,9 +29,6 @@
 (setq recentf-max-menu-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-(global-hl-line-mode t)
-
-
 
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
